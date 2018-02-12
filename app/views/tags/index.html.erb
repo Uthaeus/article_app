@@ -1,0 +1,10 @@
+<h1>Tag Index</h1>
+
+<ul class='articles'>
+  <% @tags.each do |tag| %>
+    <li><%= tag.name %></li>
+    <li><%= link_to 'Remove', tag_path(tag), method: :delete %>
+  <% end %>
+</ul>
+
+<%= link_to 'Back to Articles', articles_path %>
